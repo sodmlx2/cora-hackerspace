@@ -19,10 +19,9 @@
             color: var(--texto);
         }
 
-        /* Header com logo ao lado do texto */
         header {
             background-color: var(--amarelo);
-            padding: 1rem 5%;
+            padding: 2rem 5%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -31,16 +30,18 @@
         }
 
         .logo {
-            max-width: 80px;
+            max-width: 150px; /* Tamanho ajustado para combinar */
             height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         h1 {
             color: var(--verde-escuro);
             margin: 0;
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         .container {
@@ -49,7 +50,6 @@
             padding: 20px;
         }
 
-        /* Estilo do bloco/pasta de projeto */
         .project-card {
             background: rgba(255, 255, 255, 0.05);
             border: 2px solid var(--amarelo);
@@ -80,6 +80,14 @@
             color: #ccc;
             margin-bottom: 0;
         }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 20px;
+            opacity: 0.5;
+            border-top: 1px solid var(--verde-escuro);
+        }
     </style>
 </head>
 <body>
@@ -90,17 +98,17 @@
 </header>
 
 <div class="container">
-    <h2>📂 Visitas</h2>
+    <h2 style="color: var(--amarelo);">> 📂 Visitas</h2>
     
     <a href="garoa.html" class="project-card">
         <h2><span>📍</span> Visita ao Garoa Hacker</h2>
         <p>Confira as fotos da nossa visita ao primeiro hackerspace do Brasil.</p>
-        <small style="color: var(--amarelo); margin-top: 10px; display: block;">Clique para abrir a galeria →</small>
+        <small style="color: var(--amarelo); margin-top: 15px; display: block; font-weight: bold;">ABRIR DIRETÓRIO →</small>
     </a>
 </div>
 
 <footer>
-    <p style="text-align: center; margin-top: 100px; opacity: 0.5;">© 2026 | Cora Hacker Clube.</p>
+    <p>© 2026 | Cora Hacker Clube.</p>
 </footer>
 
 </body>
