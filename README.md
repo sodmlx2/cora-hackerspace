@@ -1,5 +1,4 @@
 ## cora-hackerspace
 Link: https://sodmlx2.github.io/cora-hackerspace/
 
-##
-by malconxx
+“Alguém deve rever, escrever e assinar os autos do passado antes que o tempo passe tudo a raso”. 
