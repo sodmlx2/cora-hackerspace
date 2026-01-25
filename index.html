@@ -3,136 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cora Hacker Club</title>
+    <title>Cora Hacker Club - Portfólio</title>
     <style>
         :root {
-            --amarelo: #f7e348; /* Cor principal da logo */
-            --verde-escuro: #0a4d4d; /* Tom de verde da logo */
-            --fundo: #051a1a; /* Versão mais escura do verde para o fundo */
+            --amarelo: #f7e348;
+            --verde-escuro: #0a4d4d;
+            --fundo: #051a1a;
             --texto: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.05);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Fira Code', monospace, sans-serif; /* Fonte estilo código */
             margin: 0;
             background-color: var(--fundo);
             color: var(--texto);
-            line-height: 1.6;
         }
 
+        /* Header Horizontal */
         header {
             background-color: var(--amarelo);
-            padding: 2rem 1rem;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            margin-bottom: 2rem;
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .logo {
-            max-width: 150px;
+            max-width: 80px;
             height: auto;
-            border-radius: 10px;
-            margin-bottom: 1rem;
         }
 
-        h1 {
+        .header-text {
+            text-align: left;
+        }
+
+        header h1 {
             color: var(--verde-escuro);
             margin: 0;
+            font-size: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 800;
         }
 
-        .gallery-container {
+        header p {
+            color: var(--verde-escuro);
+            margin: 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Estilo das Seções (Pastas de Projetos) */
+        .project-section {
+            margin-bottom: 60px;
+            border-left: 4px solid var(--amarelo);
+            padding-left: 20px;
+        }
+
+        .project-title {
+            color: var(--amarelo);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .photo-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(247, 227, 72, 0.1);
-            border-radius: 12px;
+            background: var(--card-bg);
+            border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(247, 227, 72, 0.1);
+            transition: 0.3s;
         }
 
         .photo-card:hover {
-            transform: translateY(-10px);
             border-color: var(--amarelo);
-            box-shadow: 0 10px 20px rgba(247, 227, 72, 0.2);
+            transform: scale(1.02);
         }
 
         .photo-card img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
-            display: block;
+            cursor: pointer;
         }
 
         .photo-info {
-            padding: 15px;
-            background: rgba(10, 77, 77, 0.8);
-        }
-
-        .photo-info p {
-            margin: 0;
-            font-size: 0.9rem;
-            font-weight: bold;
+            padding: 10px;
+            font-size: 0.8rem;
+            background: rgba(10, 77, 77, 0.4);
             color: var(--amarelo);
         }
 
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            text-align: center;
+            padding: 40px;
             border-top: 1px solid var(--verde-escuro);
-            font-size: 0.8rem;
-            opacity: 0.7;
+            opacity: 0.6;
         }
-
-        /* Scrollbar personalizada */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--fundo); }
-        ::-webkit-scrollbar-thumb { background: var(--verde-escuro); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--amarelo); }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="./assets/logo.png" alt="Cora Hacker Club Logo" class="logo">
-    <h1>Cora Hacker Club</h1>
-    <p style="color: #0a4d4d; font-weight: bold;">_galeria_de_fotos</p>
+    <img src="./assets/logo.png" alt="Cora Logo" class="logo">
+    <div class="header-text">
+        <h1>Cora Hacker Club</h1>
+        <p>> ~/projetos/galeria</p>
+    </div>
 </header>
 
-<div class="gallery-container">
-    <div class="gallery">
-        
-        <div class="photo-card">
-            <img src="assets/foto1.jpg" alt="Evento Cora">
-            <div class="photo-info">
-                <p>> hack_the_world_01.jpg</p>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="photo-card">
-            <img src="assets/foto2.jpg" alt="Workshop">
-            <div class="photo-info">
-                <p>> workshop_electronica.jpg</p>
+    <section class="project-section">
+        <div class="project-title">
+            <span>📂</span> VISITA_TECNICA_HACKERSPACE_01
+        </div>
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="assets/foto1.jpg" alt="Foto 1">
+                <div class="photo-info">img_01.jpg</div>
             </div>
-        </div>
+            <div class="photo-card">
+                <img src="assets/foto2.jpg" alt="Foto 2">
+                <div class="photo-info">img_02.jpg</div>
+            </div>
+            </div>
+    </section>
 
+    <section class="project-section">
+        <div class="project-title">
+            <span>📂</span> WORKSHOP_HARDWARE_2024
         </div>
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="assets/foto3.jpg" alt="Foto 3">
+                <div class="photo-info">pcb_design.jpg</div>
+            </div>
+            </div>
+    </section>
+
 </div>
 
 <footer>
-    <p>© 2026 Cora Hacker Club | Desenvolvido com código aberto</p>
+    <p>_terminal_cora_hacker_club_2026</p>
 </footer>
 
 </body>
